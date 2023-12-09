@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FinalProject.Dashboard">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame HasShadow="False" CornerRadius="10" HeightRequest="100" Padding="10" Margin="3,20,3,3" BackgroundColor="Black">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="280"/>
+                        <ColumnDefinition Width="90" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="Welcome to Interstellar!" TextColor="White" FontFamily="MontserratBold" FontSize="21"></Label>
+                    <Label Grid.Row="1" Grid.Column="0" Text="You can monitor your student's information and attendance" TextColor="White" FontFamily="NotoSansR" FontSize="14"></Label>
+
+                    <Image Source="welcome3.png" Grid.Column="1" Grid.RowSpan="2" WidthRequest="100" HeightRequest="100"></Image>
+                   
+                </Grid>
+            </Frame>
+            <Frame HasShadow="False" BorderColor="Green" CornerRadius="10" HeightRequest="250" WidthRequest="250" Padding="0" Margin="3,20,3,3">
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="rec1.png" Margin="0,10,0,0" Grid.Row="0" HeightRequest="140" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+                        <Label Text="Student Record" Grid.Row="1" FontFamily="Montserrat" FontSize="24" HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnFrameTapped" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Frame HasShadow="False" BorderColor="Red" CornerRadius="10" HeightRequest="250" WidthRequest="250" Padding="0" Margin="3,20,3,3">
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="rec1.png" Margin="0,10,0,0" Grid.Row="0" HeightRequest="140" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+                        <Label Text="Attendance" Grid.Row="1" FontFamily="Montserrat" FontSize="24" HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                </StackLayout>
+                 <Frame.GestureRecognizers>
+                    <TapGestureRecognizer/>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

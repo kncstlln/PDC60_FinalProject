@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2622" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\" />
+    <None Remove="Resources\Montserrat-Black.ttf" />
+    <None Remove="Resources\Montserrat-BlackItalic.ttf" />
+    <None Remove="Resources\Montserrat-Bold.ttf" />
+    <None Remove="Resources\Montserrat-BoldItalic.ttf" />
+    <None Remove="Resources\Montserrat-ExtraBold.ttf" />
+    <None Remove="Resources\Montserrat-ExtraBoldItalic.ttf" />
+    <None Remove="Resources\Montserrat-ExtraLight.ttf" />
+    <None Remove="Resources\Montserrat-ExtraLightItalic.ttf" />
+    <None Remove="Resources\Montserrat-Italic.ttf" />
+    <None Remove="Resources\Montserrat-Light.ttf" />
+    <None Remove="Resources\Montserrat-LightItalic.ttf" />
+    <None Remove="Resources\Montserrat-Medium.ttf" />
+    <None Remove="Resources\Montserrat-MediumItalic.ttf" />
+    <None Remove="Resources\Montserrat-Regular.ttf" />
+    <None Remove="Resources\Montserrat-SemiBold.ttf" />
+    <None Remove="Resources\Montserrat-SemiBoldItalic.ttf" />
+    <None Remove="Resources\Montserrat-Thin.ttf" />
+    <None Remove="Resources\Montserrat-ThinItalic.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Montserrat-Black.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-BlackItalic.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-Bold.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-BoldItalic.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-ExtraBold.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-ExtraBoldItalic.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-ExtraLight.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-ExtraLightItalic.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-Italic.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-Light.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-LightItalic.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-Medium.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-MediumItalic.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-Regular.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-SemiBold.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-SemiBoldItalic.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-Thin.ttf" />
+    <EmbeddedResource Include="Resources\Montserrat-ThinItalic.ttf" />
+  </ItemGroup>
+</Project>

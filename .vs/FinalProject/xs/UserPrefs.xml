@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{36991135-E9A0-4747-B1C8-7C187604904C}|Default">
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.2.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FinalProject/FinalProject/Dashboard.xaml">
+    <Files>
+      <File FileName="FinalProject/FinalProject/Dashboard.xaml" Line="14" Column="43" />
+      <File FileName="FinalProject/FinalProject/Dashboard.xaml.cs" Line="21" Column="10" />
+      <File FileName="FinalProject/FinalProject/CollegesPage.xaml" Line="7" Column="22" />
+      <File FileName="FinalProject/FinalProject/CollegesPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="FinalProject/FinalProject/AssemblyInfo.cs" Line="6" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FinalProject" expanded="True">
+            <Node name="FinalProject">
+              <Node name="Dashboard.xaml" expanded="True" />
+              <Node name="LoginPage.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+            <Node name="FinalProject.Android" expanded="True">
+              <Node name="Resources" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.FinalProject.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
