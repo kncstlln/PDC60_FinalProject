@@ -36,7 +36,7 @@
                     <TapGestureRecognizer/>
                 </Frame.GestureRecognizers>
             </Frame>
-            <Frame HasShadow="False" BorderColor="Green" CornerRadius="10" HeightRequest="250" WidthRequest="250" Padding="0" Margin="3,3,3,3">
+            <Frame HasShadow="False" BorderColor="Red" CornerRadius="10" HeightRequest="250" WidthRequest="250" Padding="0" Margin="3,3,3,3">
                 <StackLayout>
                     <Grid>
                         <Grid.RowDefinitions>
