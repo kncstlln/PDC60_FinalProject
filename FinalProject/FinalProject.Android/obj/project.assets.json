@@ -3803,20 +3803,20 @@
     ]
   },
   "packageFolders": {
-    "/Users/kane/.nuget/packages/": {}
+    "/Users/k4rylle/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/FinalProject.Android.csproj",
+      "projectUniqueName": "/Users/k4rylle/Documents/PDC60/PDC60_FinalProject/FinalProject/FinalProject.Android/FinalProject.Android.csproj",
       "projectName": "FinalProject.Android",
-      "projectPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/FinalProject.Android.csproj",
-      "packagesPath": "/Users/kane/.nuget/packages/",
-      "outputPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/",
+      "projectPath": "/Users/k4rylle/Documents/PDC60/PDC60_FinalProject/FinalProject/FinalProject.Android/FinalProject.Android.csproj",
+      "packagesPath": "/Users/k4rylle/.nuget/packages/",
+      "outputPath": "/Users/k4rylle/Documents/PDC60/PDC60_FinalProject/FinalProject/FinalProject.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/kane/.config/NuGet/NuGet.Config"
+        "/Users/k4rylle/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid13.0"
@@ -3827,8 +3827,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/FinalProject.csproj": {
-              "projectPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/FinalProject.csproj"
+            "/Users/k4rylle/Documents/PDC60/PDC60_FinalProject/FinalProject/FinalProject/FinalProject.csproj": {
+              "projectPath": "/Users/k4rylle/Documents/PDC60/PDC60_FinalProject/FinalProject/FinalProject/FinalProject.csproj"
             }
           }
         }

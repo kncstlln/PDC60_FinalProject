@@ -1064,19 +1064,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/kane/.nuget/packages/": {}
+    "/Users/k4rylle/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/FinalProject.csproj",
+      "projectUniqueName": "/Users/k4rylle/Documents/PDC60/PDC60_FinalProject/FinalProject/FinalProject/FinalProject.csproj",
       "projectName": "FinalProject",
-      "projectPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/FinalProject.csproj",
-      "packagesPath": "/Users/kane/.nuget/packages/",
-      "outputPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/",
+      "projectPath": "/Users/k4rylle/Documents/PDC60/PDC60_FinalProject/FinalProject/FinalProject/FinalProject.csproj",
+      "packagesPath": "/Users/k4rylle/.nuget/packages/",
+      "outputPath": "/Users/k4rylle/Documents/PDC60/PDC60_FinalProject/FinalProject/FinalProject/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/kane/.config/NuGet/NuGet.Config"
+        "/Users/k4rylle/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -1137,7 +1137,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/Users/kane/Library/Caches/VisualStudio/17.0/MSBuild/43916_3/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/k4rylle/Library/Caches/VisualStudio/17.0/MSBuild/12303_3/RuntimeIdentifierGraph.json"
       }
     }
   },
