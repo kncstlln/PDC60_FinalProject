@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FinalProject.CollegesPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame HasShadow="False" BorderColor="Green" CornerRadius="10" HeightRequest="250" WidthRequest="250" Padding="0" Margin="3,3,3,3">
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="120"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="rec1.png" Margin="0,10,0,0" Grid.Row="0" HeightRequest="80" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+                        <Label Text="Student Record" Grid.Row="1" FontFamily="Montserrat" FontSize="24" HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Frame HasShadow="False" BorderColor="Pink" CornerRadius="10" HeightRequest="250" WidthRequest="250" Padding="0" Margin="3,3,3,3">
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="120"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="rec1.png" Margin="0,10,0,0" Grid.Row="0" HeightRequest="80" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+                        <Label Text="Attendance" Grid.Row="1" FontFamily="Montserrat" FontSize="24" HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                </StackLayout>
+                 <Frame.GestureRecognizers>
+                    <TapGestureRecognizer/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            <Frame HasShadow="False" BorderColor="HotPink" CornerRadius="10" HeightRequest="250" WidthRequest="250" Padding="0" Margin="3,3,3,3">
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="120"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="rec1.png" Margin="0,10,0,0" Grid.Row="0" HeightRequest="80" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+                        <Label Text="Attendance" Grid.Row="1" FontFamily="Montserrat" FontSize="24" HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                </StackLayout>
+                 <Frame.GestureRecognizers>
+                    <TapGestureRecognizer/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            <Frame HasShadow="False" BorderColor="Red" CornerRadius="10" HeightRequest="250" WidthRequest="250" Padding="0" Margin="3,3,3,3">
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="120"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="rec1.png" Margin="0,10,0,0" Grid.Row="0" HeightRequest="80" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+                        <Label Text="Attendance" Grid.Row="1" FontFamily="Montserrat" FontSize="24" HorizontalTextAlignment="Center"></Label>
+                    </Grid>
+                </StackLayout>
+                 <Frame.GestureRecognizers>
+                    <TapGestureRecognizer/>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
