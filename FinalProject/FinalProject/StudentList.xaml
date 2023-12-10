@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FinalProject.StudentList">
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Search Student"
+                       BackgroundColor="LightGray"
+                       CancelButtonColor="Black"
+                       PlaceholderColor="Black"
+                       TextColor="Black"
+                       TextTransform="Lowercase"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Medium"
+                       FontAttributes="Italic" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <!--<Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,0,5,0">
+                        <Button BackgroundColor="Black" Grid.Column="0" TextColor="White" WidthRequest="40" Text="+" HorizontalOptions="EndAndExpand"/>
+                        <Button BackgroundColor="Black" Grid.Column="1" TextColor="White" WidthRequest="40" Text="-" HorizontalOptions="EndAndExpand"/>
+                        <Button BackgroundColor="Black" Grid.Column="2" TextColor="White" WidthRequest="40" Text="D" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+            </Grid>
+            <Frame HasShadow="False" CornerRadius="10" HeightRequest="30" Padding="10" Margin="3,3,3,1" BorderColor="Gray">
+                <Label Text="Kane Erryl G. Castillano" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
+            </Frame>
+            <Frame HasShadow="False" CornerRadius="10" HeightRequest="30" Padding="10" Margin="3,0,3,1" BorderColor="Gray">
+                <Label Text="Karylle L. Lopez" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
+            </Frame>
+            <Frame HasShadow="False" CornerRadius="10" HeightRequest="30" Padding="10" Margin="3,0,3,1" BorderColor="Gray">
+                <Label Text="Aaron Echon" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
+            </Frame>
+            <Frame HasShadow="False" CornerRadius="10" HeightRequest="30" Padding="10" Margin="3,0,3,1" BorderColor="Gray">
+                <Label BindingContext="{Binding Name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

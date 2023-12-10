@@ -5,7 +5,6 @@
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/FinalProject.csproj.AssemblyReference.cache
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/FinalProject.GeneratedMSBuildEditorConfig.editorconfig
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/App.xaml.g.cs
-/Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/CollegesPage.xaml.g.cs
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/Dashboard.xaml.g.cs
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/LoginPage.xaml.g.cs
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
@@ -16,3 +15,4 @@
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/FinalProject.dll
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/refint/FinalProject.dll
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/FinalProject.pdb
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/StudentList.xaml.g.cs

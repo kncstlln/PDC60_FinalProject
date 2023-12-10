@@ -13,11 +13,24 @@ namespace FinalProject
 
 		}
 
-        private async void OnFrameTapped(object sender, EventArgs e)
+        private async void OnBSIT1_Tapped(System.Object sender, System.EventArgs e)
         {
+            await Navigation.PushAsync(new StudentList());
+        }
 
-            await Navigation.PushAsync(new CollegesPage());
+        private async void OnBSIT2_Tapped(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new StudentList());
+        }
 
+        private async void OnBSIT3_Tapped(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new StudentList());
+        }
+
+        private async void OnBSIT4_Tapped(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new StudentList());
         }
     }
 }
