@@ -13,7 +13,6 @@
                        HorizontalTextAlignment="Center"
                        FontSize="Medium"
                        x:Name="SearchBar" />
-            <StackLayout>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40"/>
@@ -25,42 +24,40 @@
                         </StackLayout>
                 </Grid>
 
-                <ListView ItemsSource="{Binding Items}" Margin="0,10,0,0">
+                <!--<Frame x:Name="studentFilter" HasShadow="False" CornerRadius="10" HeightRequest="30" Padding="10" Margin="3,3,3,1" BorderColor="Gray">
+                    <Label Text="{Binding name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="StudentProfile_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>-->
+
+
+                <ListView x:Name="studentFilter" BackgroundColor="Black">
                     <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame HasShadow="False" CornerRadius="10" HeightRequest="30" Padding="10" Margin="3,3,3,1" BorderColor="Gray">
-                                <Label Text="{Binding Name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
-                                <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="StudentProfile_Tapped"/>
-                                </Frame.GestureRecognizers>
-                            </Frame>
+                            <ViewCell.View>
+                                <SwipeView>
+                                    <SwipeView.LeftItems>
+                                        <SwipeItems>
+                                            <SwipeItem Text="Update" Command="{Binding UpdateCommand}" BackgroundColor="LightGreen" />
+                                        </SwipeItems>
+                                    </SwipeView.LeftItems>
+                                    <SwipeView.RightItems>
+                                        <SwipeItems>
+                                            <SwipeItem Text="Delete" Command="{Binding DeleteCommand}" BackgroundColor="LightCoral" />
+                                        </SwipeItems>
+                                    </SwipeView.RightItems>
+
+                                    <StackLayout>
+                                        <Label Text="" TextColor="White"/>
+                                    </StackLayout>
+                                </SwipeView>
+                            </ViewCell.View>
                         </ViewCell>
                     </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </StackLayout>
-
-            <!--<Frame x:Name="frame1"  HasShadow="False" CornerRadius="10" HeightRequest="30" Padding="10" Margin="3,3,3,1" BorderColor="Gray">
-                <Label Text="Kane Erryl G. Castillano" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="StudentProfile_Tapped"/>
-                </Frame.GestureRecognizers>
-            </Frame>
-
-            <Frame x:Name="frame2"  HasShadow="False" CornerRadius="10" HeightRequest="30" Padding="10" Margin="3,0,3,1" BorderColor="Gray">
-                <Label Text="Karylle L. Lopez" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="StudentProfile_Tapped"/>
-                </Frame.GestureRecognizers>
-            </Frame>
-
-            <Frame x:Name="frame3"  HasShadow="False" CornerRadius="10" HeightRequest="30" Padding="10" Margin="3,0,3,1" BorderColor="Gray">
-                <Label Text="Aaron Echon" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="StudentProfile_Tapped"/>
-                </Frame.GestureRecognizers>
-            </Frame>-->
 
         </StackLayout>
     </ContentPage.Content>

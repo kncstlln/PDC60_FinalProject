@@ -8,25 +8,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FinalProject.StudentList.xaml", "StudentList.xaml", typeof(global::FinalProject.StudentList))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FinalProject.UpdatePage.xaml", "UpdatePage.xaml", typeof(global::FinalProject.UpdatePage))]
 
 namespace FinalProject {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("StudentList.xaml")]
-    public partial class StudentList : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("UpdatePage.xaml")]
+    public partial class UpdatePage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.SearchBar SearchBar;
+        private global::Xamarin.Forms.Entry ID;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.ListView studentFilter;
+        private global::Xamarin.Forms.Entry Name;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(StudentList));
-            SearchBar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.SearchBar>(this, "SearchBar");
-            studentFilter = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "studentFilter");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(UpdatePage));
+            ID = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "ID");
+            Name = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Name");
         }
     }
 }

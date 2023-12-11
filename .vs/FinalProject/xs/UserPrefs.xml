@@ -1,32 +1,39 @@
 ﻿<Properties StartupConfiguration="{36991135-E9A0-4747-B1C8-7C187604904C}|Default">
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.2.0" />
   <MultiItemStartupConfigurations />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.Ide.ItemProperties.FinalProject.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="FinalProject/FinalProject/StudentList.xaml.cs">
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.2.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../PDC6-Module08-master/PDC06_Module08/SearchPage.xaml.cs">
     <Files>
-      <File FileName="FinalProject/FinalProject/StudentList.xaml" Line="35" Column="65" />
-      <File FileName="FinalProject/FinalProject/StudentList.xaml.cs" Line="42" Column="6" />
-      <File FileName="FinalProject/FinalProject/LoginPage.xaml" Line="1" Column="1" />
-      <File FileName="FinalProject/FinalProject/LoginPage.xaml.cs" Line="21" Column="10" />
+      <File FileName="FinalProject/FinalProject/StudentList.xaml" NotebookId="1" />
+      <File FileName="FinalProject/FinalProject/StudentList.xaml.cs" Line="137" Column="28" NotebookId="1" />
+      <File FileName="FinalProject/FinalProject/LoginPage.xaml" NotebookId="1" />
+      <File FileName="FinalProject/FinalProject/LoginPage.xaml.cs" NotebookId="1" />
     </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="2600" Y="-30" Width="861" Height="902">
+        <Files>
+          <File FileName="../PDC6-Module08-master/PDC06_Module08/SearchPage.xaml.cs" Line="126" Column="1" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="FinalProject" expanded="True">
+          <Node name="FinalProject">
             <Node name="FinalProject">
-              <Node name="LoginPage.xaml" expanded="True" />
-              <Node name="StudentList.xaml" expanded="True" />
-              <Node name="StudentProfile.xaml" expanded="True" />
+              <Node name="StudentList.xaml" expanded="True">
+                <Node name="StudentList.xaml.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

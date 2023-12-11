@@ -18,3 +18,4 @@
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/bin/Debug/netstandard2.0/ref/FinalProject.dll
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/bin/Debug/netstandard2.0/FinalProject.pdb
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/UpdatePage.xaml.g.cs
