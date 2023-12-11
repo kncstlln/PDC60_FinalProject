@@ -8,21 +8,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FinalProject.StudentList.xaml", "StudentList.xaml", typeof(global::FinalProject.StudentList))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FinalProject.StudentListViewModel.xaml", "StudentListViewModel.xaml", typeof(global::FinalProject.StudentListViewModel))]
 
 namespace FinalProject {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("StudentList.xaml")]
-    public partial class StudentList : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("StudentListViewModel.xaml")]
+    public partial class StudentListViewModel : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.SearchBar SearchBar;
+        private global::Xamarin.Forms.ListView MyListView;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(StudentList));
-            SearchBar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.SearchBar>(this, "SearchBar");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(StudentListViewModel));
+            MyListView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "MyListView");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace FinalProject
             string username = EntryUsername.Text;
             string password = EntryPassword.Text;
 
-            if (username == "PDC60_Administrator" && password == "admin123")
+            if (username == "admin" && password == "admin123")
             {
                 await Navigation.PushAsync(new Dashboard());
 

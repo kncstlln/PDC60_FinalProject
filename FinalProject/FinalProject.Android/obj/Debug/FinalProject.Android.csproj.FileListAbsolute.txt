@@ -68,6 +68,13 @@
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/welcome2.png
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/welcome3.png
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/rec1.png
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/pencil.png
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/trash.png
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/profile.png
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/bsit1.png
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/bsit2.png
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/bsit3.png
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/bsit4.png
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/uploadflags.txt
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/resolvedassemblies.hash
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/android/assets/FinalProject.Android.dll
@@ -651,10 +658,3 @@
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/stamp/_GenerateJavaStubs.stamp
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
-/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/pencil.png
-/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/trash.png
-/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/profile.png
-/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/bsit1.png
-/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/bsit2.png
-/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/bsit3.png
-/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/Debug/res/drawable/bsit4.png

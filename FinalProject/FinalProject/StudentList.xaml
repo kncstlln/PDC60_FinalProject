@@ -12,20 +12,36 @@
                        TextColor="Black"
                        HorizontalTextAlignment="Center"
                        FontSize="Medium"
-                       TextChanged="OnSearchTextChanged"/>
+                       x:Name="SearchBar" />
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,0,5,0">
+                            <Button BackgroundColor="#F3F3F1" Grid.Column="0" TextColor="Black" WidthRequest="40" Text="+" HorizontalOptions="EndAndExpand"/>
+                            <ImageButton BackgroundColor="#F3F3F1" Source="pencil.png" Grid.Column="1" Padding="10" WidthRequest="40" HorizontalOptions="EndAndExpand"/>
+                            <ImageButton BackgroundColor="#F3F3F1" Source="trash.png" Grid.Column="2" Padding="9" WidthRequest="40" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                </Grid>
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="40"/>
-                </Grid.RowDefinitions>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,0,5,0">
-                        <Button BackgroundColor="#F3F3F1" Grid.Column="0" TextColor="Black" WidthRequest="40" Text="+" HorizontalOptions="EndAndExpand"/>
-                        <ImageButton BackgroundColor="#F3F3F1" Source="pencil.png" Grid.Column="1" Padding="10" WidthRequest="40" HorizontalOptions="EndAndExpand"/>
-                        <ImageButton BackgroundColor="#F3F3F1" Source="trash.png" Grid.Column="2" Padding="9" WidthRequest="40" HorizontalOptions="EndAndExpand"/>
-                    </StackLayout>
-            </Grid>
+                <ListView ItemsSource="{Binding Items}" Margin="0,10,0,0">
+                    <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame HasShadow="False" CornerRadius="10" HeightRequest="30" Padding="10" Margin="3,3,3,1" BorderColor="Gray">
+                                <Label Text="{Binding Name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="StudentProfile_Tapped"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
 
-            <Frame x:Name="frame1"  HasShadow="False" CornerRadius="10" HeightRequest="30" Padding="10" Margin="3,3,3,1" BorderColor="Gray">
+            <!--<Frame x:Name="frame1"  HasShadow="False" CornerRadius="10" HeightRequest="30" Padding="10" Margin="3,3,3,1" BorderColor="Gray">
                 <Label Text="Kane Erryl G. Castillano" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="StudentProfile_Tapped"/>
@@ -44,14 +60,7 @@
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="StudentProfile_Tapped"/>
                 </Frame.GestureRecognizers>
-            </Frame>
-
-            <Frame x:Name="frame4"  HasShadow="False" CornerRadius="10" HeightRequest="30" Padding="10" Margin="3,0,3,1" BorderColor="Gray">
-                <Label BindingContext="{Binding Name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="StudentProfile_Tapped"/>
-                </Frame.GestureRecognizers>
-            </Frame>
+            </Frame>-->
 
         </StackLayout>
     </ContentPage.Content>
