@@ -19,7 +19,18 @@ namespace FinalProject
 
         private async void Submit_Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Dashboard());
+            string username = EntryUsername.Text;
+            string password = EntryPassword.Text;
+
+            if (username == "PDC60_Administrator" && password == "admin123")
+            {
+                await Navigation.PushAsync(new Dashboard());
+
+            }
+            else
+            {
+                await DisplayAlert("Login Failed", "Invalid username or password", "OK");
+            }
         }
     }
 

@@ -3,23 +3,16 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="FinalProject.LoginPage"
-    xmlns:controls="clr-namespace:XamarinSamples.Views.Controls;assembly=XamarinSamples"
     x:Name="this">
     <ContentPage.Content>
-
         <StackLayout BackgroundColor="White">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="65"/>
                     <ColumnDefinition Width="295" />
                 </Grid.ColumnDefinitions>
-                <!--<Label Text="Interstellar" Grid.Column="1" FontSize="Large" TextColor="NavajoWhite" FontFamily="MontserratBold" HorizontalOptions="Center" VerticalOptions="Center"/>-->
             </Grid>
             <Image Source="interstellar.png" Margin="0,25,0,5"></Image>
-        
-       
-       
-
             <Frame BackgroundColor="White" HeightRequest="300" CornerRadius="20">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -29,13 +22,12 @@
                         <RowDefinition Height="55"/>
                     </Grid.RowDefinitions>
                     <Label Margin="0,0,0,0" VerticalTextAlignment="Start" VerticalOptions="Start" Grid.Row="0" FontFamily="MontserratSB" TextColor="Black" HorizontalOptions="Start" HorizontalTextAlignment="Center" FontSize="39" >Welcome!</Label>
-                    <Entry Margin="0,0,0,5" Placeholder="Username"  PlaceholderColor="Black" TextColor="Black" FontFamily="NotoSansR" Grid.Row="1" ></Entry>
-                    <Entry Placeholder="Password"  IsPassword="true" PlaceholderColor="Black" Grid.Row="2" TextColor="Black"  FontFamily="NotoSansR"></Entry>
+                    <Entry Margin="0,0,0,5" x:Name="EntryUsername" Placeholder="Username"  PlaceholderColor="Black" TextColor="Black" FontFamily="NotoSansR" Grid.Row="1" ></Entry>
+                    <Entry Placeholder="Password" x:Name="EntryPassword"  IsPassword="true" PlaceholderColor="Black" Grid.Row="2" TextColor="Black"  FontFamily="NotoSansR"></Entry>
                     <Button Margin="0,15,0,0" Clicked="Submit_Button_Clicked" Grid.Row="3" Text="Submit" BackgroundColor="Black" TextColor="White" CornerRadius="10" WidthRequest="100" HorizontalOptions="Center"></Button>
                 </Grid>
             </Frame>
         </StackLayout>
-      
     </ContentPage.Content>
 </ContentPage>
 
