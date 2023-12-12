@@ -18,4 +18,10 @@
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/bin/Debug/netstandard2.0/ref/FinalProject.dll
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/bin/Debug/netstandard2.0/FinalProject.pdb
 /Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/XamlC.stamp
-/Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/UpdatePage.xaml.g.cs
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/AddAcademicHistoryPage.xaml.g.cs
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/AttendancePage.xaml.g.cs
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/AddAttendancePage.xaml.g.cs
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/UpdateAttendancePage.xaml.g.cs
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/UpdateAcademicHistoryPage.xaml.g.cs
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/AddStudentPage.xaml.g.cs
+/Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/Debug/netstandard2.0/UpdateStudentPage.xaml.g.cs

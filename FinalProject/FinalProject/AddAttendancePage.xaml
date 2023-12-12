@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FinalProject.AddAttendancePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame Margin="20" HeightRequest="1000" HasShadow="False" BorderColor="Black" CornerRadius="10">
+                <StackLayout>
+                    <Frame BackgroundColor="#F3F3F3" HeightRequest="26">
+                        <Label Text="Mark Student Attendance" HorizontalOptions="Center" FontFamily="MontserratM" VerticalOptions="CenterAndExpand" FontSize="19"></Label>
+
+                    </Frame>
+
+                    <Image WidthRequest="150" HeightRequest="150" Source="profile.png"/>
+                    <Grid Margin="10,20,10,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>  
+                        <RowDefinition Height="40"/>  
+                        <RowDefinition Height="40"/>  
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>  
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Text="ID No." />
+                    <Label Grid.Row="1" Text="Name" />
+                    <Label Grid.Row="2" Text="Age" />
+                    <Label Grid.Row="3" Text="Section"/>
+                    <Label Grid.Row="4" Text="Mobile No."/>
+                    <Label Grid.Row="5" Text="Email"/>
+                    <Label Grid.Column="1" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding age}"/>
+                    <Label Grid.Column="1" Grid.Row="1" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding age}"/>
+                    <Label Grid.Column="1" Grid.Row="2" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding age}"/>
+                    <Label Grid.Column="1" Grid.Row="3" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding section}"/>
+                    <Label Grid.Column="1" Grid.Row="4" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding mobile_num}"/>
+                    <Label Grid.Column="1" Grid.Row="5"  TextColor="Black" FontFamily="Montserrat" FontSize="13" Text="{Binding email}"/>
+                   
+                </Grid>
+                     <Label Text="Date For Attendance" FontFamily="MontserratM" HorizontalTextAlignment="Center"/>
+                     <Label Text="LAGAY DATE" Margin="0,0,0,20" FontFamily="MontserratSB" HorizontalTextAlignment="Center" FontSize="16"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Button Text="Present" WidthRequest="150" CornerRadius="20" BackgroundColor="#B5F4D1" TextColor="#5AA572" FontFamily="MontserratBold"></Button>
+                        <Button Text="Absent" WidthRequest="150" CornerRadius="20" BackgroundColor="#FFE2DB" TextColor="#C36060" FontFamily="MontserratBold"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

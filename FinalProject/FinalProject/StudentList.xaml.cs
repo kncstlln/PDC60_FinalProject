@@ -17,167 +17,157 @@ namespace FinalProject
 
 {
 
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public class Students
     {
-        public int ID { get; set; }
+        public int id { get; set; }
         public string name { get; set; }
+        public string section { get; set; }
+        public string level { get; set; }
+        public int age { get; set; }
+        public string email { get; set; }
+        public string mobile_num { get; set; }
+        public string birthdate { get; set; }
 
     }
 
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StudentList : ContentPage
     {
-        public const string delete = "http://192.168.100.86/PDC60_api/api-delete.php";
-        public const string search = "http://192.168.100.86/PDC60_api/api-search.php";
-        public HttpClient _Client = new HttpClient();
-        public ObservableCollection<Students> _studentsList;
+        private const string retrieve = "http://192.168.100.86/PDC60_api/api_r2.php";
+        private const string search = "http://192.168.100.86/PDC60_api/api-search.php";
+        private ObservableCollection<Students> _studentsList;
+        private HttpClient _Client = new HttpClient();
 
         public StudentList()
         {
             InitializeComponent();
-            LoadStudents();
+
         }
 
-        private async void LoadStudents()
+        protected override async void OnAppearing()
+        {
+
+            var content = await _Client.GetStringAsync(retrieve);
+            var student = JsonConvert.DeserializeObject<List<Students>>(content);
+
+            _studentsList = new ObservableCollection<Students>(student);
+            studentFilter.ItemsSource = _studentsList;
+            base.OnAppearing();
+        }
+
+        private async void OnRefresh(object sender, EventArgs e)
         {
             try
             {
-                // Make a request to your API to get the list of students
-                var content = await _Client.GetStringAsync("http://192.168.100.86/PDC60_api/servercon.php");
+                var content = await _Client.GetStringAsync(retrieve);
+                var student = JsonConvert.DeserializeObject<List<Students>>(content);
 
-                // Deserialize the response
-                var responseObject = JsonConvert.DeserializeObject<ResponseObject>(content);
-
-                if (responseObject.status)
-                {
-                    var studentsResult = JsonConvert.DeserializeObject<List<Students>>(responseObject.data.ToString());
-
-                    _studentsList = new ObservableCollection<Students>(studentsResult);
-                    studentFilter.ItemsSource = _studentsList;
-                }
-                else
-                {
-                    System.Diagnostics.Debug.WriteLine($"Error: {responseObject.message}");
-                }
+                _studentsList = new ObservableCollection<Students>(student);
+                studentFilter.ItemsSource = _studentsList;
+                await DisplayAlert("Success", "Data refreshed successfully!", "OK");
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"An error occurred: {ex.Message}");
+                await DisplayAlert("Error", $"Failed to refresh data. {ex.Message}", "OK");
             }
         }
 
-        public async void OnMore(object sender, EventArgs e)
+        private async Task RefreshData()
         {
             try
             {
-                var mi = (MenuItem)sender;
-                if (mi.CommandParameter is int ID)
-                {
-                    bool result = await DisplayAlert("Update Records", $"Are you sure you want to update ID No: {ID}?", "OK", "CANCEL");
-                    if (result)
-                    {
-                        Students studentsList = new Students { ID = ID };
-                        await Navigation.PushAsync(new UpdatePage(studentsList));
-                    }
-                    else
-                    {
-                        //Handle Cancel Button
-                    }
-                }
-                else
-                {
+                var content = await _Client.GetStringAsync(retrieve);
+                var student = JsonConvert.DeserializeObject<List<Students>>(content);
 
-                }
+                _studentsList = new ObservableCollection<Students>(student);
+                studentFilter.ItemsSource = _studentsList;
+                await DisplayAlert("Success", "Data refreshed successfully!", "OK");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Exception in OnUpdate: {ex.Message}");
+                await DisplayAlert("Error", $"Failed to refresh data. {ex.Message}", "OK");
             }
+
         }
 
-        public async void OnDelete(object sender, EventArgs e)
+        private async Task DeleteRecord(Students student)
         {
-            try
-            {
-                var mi = (MenuItem)sender;
-                if (mi.CommandParameter is int ID)
-                {
-                    bool result = await DisplayAlert("Delete Records", $"Are you sure you want to delete ID No: {ID}?", "OK", "CANCEL");
-                    if (result)
-                    {
-                        Students post = new Students { ID = ID };
-                        var content = JsonConvert.SerializeObject(post);
-                        await _Client.PostAsync(delete, new StringContent(content, Encoding.UTF8, "application/json"));
-                        await DisplayAlert("Success", $"Student with ID No: {ID} deleted successfully.", "OK");
-                    }
-                    else
-                    {
-                        //Cancel actions
-                    }
-                }
-                else
-                {
-                    //handle null
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Exception in OnDelete: {ex.Message}");
-            }
-        }
+            var confirm = await DisplayAlert("Confirm Deletion", "Are you sure you want to delete this record?", "Yes", "No");
 
-        public class ResponseObject
-        {
-            public bool status { get; set; }
-            public JToken data { get; set; }
-            public string message { get; set; }
-        }
-
-        private async void StudentProfile_Tapped(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new StudentProfile());
-        }
-
-        private async void OnSearchTextchanged(object sender, TextChangedEventArgs e)
-        {
-            string searchQuery = e.NewTextValue;
-            if (string.IsNullOrWhiteSpace(searchQuery))
-            {
-
-            }
-            else
+            if (confirm)
             {
                 try
                 {
+                    var urlDelete = "http://192.168.100.86/PDC60_api/api-delete.php";
+                    var data = JsonConvert.SerializeObject(new { id = student.id });
+                    var content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
 
-                    var searchUrl = $"{search}?username={searchQuery}";
-
-                    System.Diagnostics.Debug.WriteLine($"Search URL: {searchUrl}");
-
-                    var content = await _Client.GetStringAsync(searchUrl);
-
-                    var responseObject = JsonConvert.DeserializeObject<ResponseObject>(content);
-
-                    if (responseObject.status)
+                    var request = new HttpRequestMessage
                     {
-                        var searchResult = JsonConvert.DeserializeObject<List<Students>>(responseObject.data.ToString());
+                        Method = HttpMethod.Delete,
+                        RequestUri = new Uri(urlDelete),
+                        Content = content
+                    };
 
-                        _studentsList = new ObservableCollection<Students>(searchResult);
-                        studentFilter.ItemsSource = _studentsList;
+                    var response = await _Client.SendAsync(request);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        await DisplayAlert("Success", "Record deleted successfully!", "OK");
+                        await RefreshData(); // Refresh the data after deletion
+                                             // After a successful delete, pop the current page to go back
+                        await Navigation.PopAsync();
                     }
                     else
                     {
-                        System.Diagnostics.Debug.WriteLine($"Error: {responseObject.message}");
+                        await DisplayAlert("Error", "Failed to delete record. Please try again.", "OK");
                     }
                 }
                 catch (Exception ex)
                 {
-
-                    System.Diagnostics.Debug.WriteLine($"An error occured: {ex.Message}");
+                    await DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
                 }
             }
+        }
+
+        public void OnDelete(object sender, EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+            DisplayAlert("Are you sure you want to delete this?", mi.CommandParameter + " delete context action", "OK");
+        }
+
+        //private async void OnAddRecord(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushAsync(new AddStudent());
+        //}
+
+        private async void StudentProfile_Tapped(Object sender, EventArgs e)
+        {
+            var frame = sender as Frame;
+            var selectedStudent = frame?.BindingContext as Students;
+
+            if (selectedStudent != null)
+            {
+                await Navigation.PushAsync(new StudentProfile(selectedStudent));
+            }
+        }
+
+        private async void AddStudentPage_Clicked(Object sender, EventArgs e)
+        {
+
+           await Navigation.PushAsync(new AddStudentPage());
 
         }
+
+        private async void UpdateStudentPage_Clicked(Object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new UpdateStudentPage());
+
+        }
+
+
+
 
 
 

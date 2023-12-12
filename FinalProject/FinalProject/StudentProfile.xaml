@@ -11,12 +11,12 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span FontSize="16">ID:</Span>
-                                <Span FontFamily="MontserratM" FontSize="21">18-0165-372</Span>
+                                <Span FontFamily="MontserratM" FontSize="21" Text="{Binding id}"></Span>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
                 <Image WidthRequest="200" HeightRequest="200" Source="profile.png"/>
-                <Label FontFamily="MontserratBold" FontSize="18" HorizontalTextAlignment="Center" TextColor="Black" Text ="Kane Erryl G. Castillano"/>
+                <Label FontFamily="MontserratBold" FontSize="18" HorizontalTextAlignment="Center" TextColor="Black" Text="{Binding name}"/>
                 <Grid Margin="10,20,10,10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40"/>  
@@ -32,14 +32,17 @@
                     <Label Grid.Row="1" Text="Section"/>
                     <Label Grid.Row="2" Text="Mobile No."/>
                     <Label Grid.Row="3" Text="Email"/>
-                    <Label Grid.Column="1" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="21 years old"/>
-                    <Label Grid.Row="1" Grid.Column="1" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="BSIT-4A"/>
-                    <Label Grid.Row="2" Grid.Column="1" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="09429900320"/>
-                    <Label Grid.Row="3" Grid.Column="1" TextColor="Black" FontFamily="Montserrat" FontSize="13" Text="castillano.kaneerryl@auf.edu.ph "/>
+                    <Label Grid.Column="1" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding age}"/>
+                    <Label Grid.Row="1" Grid.Column="1" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding section}"/>
+                    <Label Grid.Row="2" Grid.Column="1" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding mobile_num}"/>
+                    <Label Grid.Row="3" Grid.Column="1" TextColor="Black" FontFamily="Montserrat" FontSize="13" Text="{Binding email}"/>
                 </Grid>
                 <Label Grid.Row="4" FontFamily="MontserratM" FontSize="24" TextColor="Black" HorizontalTextAlignment="Center" Grid.Column="1" Text="School Record"/>
                 <Frame Padding="20,15">
                     <Label Text="Attendance" FontFamily="MontserratM" TextColor="Black" FontSize="18"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="AttendancePage_Tapped"/>
+                    </Frame.GestureRecognizers>
                 </Frame>
                 <Frame Padding="20,15">
                     <Label Text="Academic History" FontFamily="MontserratM" TextColor="Black" FontSize="18" Padding="0"/>

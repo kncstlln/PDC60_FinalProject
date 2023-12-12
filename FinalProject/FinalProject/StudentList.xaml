@@ -12,52 +12,64 @@
                        TextColor="Black"
                        HorizontalTextAlignment="Center"
                        FontSize="Medium"
-                       x:Name="SearchBar" />
+                       x:Name="SearchBar"
+                       />
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40"/>
                     </Grid.RowDefinitions>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,0,5,0">
-                            <Button BackgroundColor="#F3F3F1" Grid.Column="0" TextColor="Black" WidthRequest="40" Text="+" HorizontalOptions="EndAndExpand"/>
-                            <ImageButton BackgroundColor="#F3F3F1" Source="pencil.png" Grid.Column="1" Padding="10" WidthRequest="40" HorizontalOptions="EndAndExpand"/>
+                            <Button BackgroundColor="#F3F3F1" Clicked="AddStudentPage_Clicked" Grid.Column="0" TextColor="Black" WidthRequest="40" Text="+" HorizontalOptions="EndAndExpand"/>
+                            <ImageButton BackgroundColor="#F3F3F1" Clicked="UpdateStudentPage_Clicked" Source="pencil.png" Grid.Column="1" Padding="10" WidthRequest="40" HorizontalOptions="EndAndExpand"/>
                             <ImageButton BackgroundColor="#F3F3F1" Source="trash.png" Grid.Column="2" Padding="9" WidthRequest="40" HorizontalOptions="EndAndExpand"/>
                         </StackLayout>
                 </Grid>
 
-                <!--<Frame x:Name="studentFilter" HasShadow="False" CornerRadius="10" HeightRequest="30" Padding="10" Margin="3,3,3,1" BorderColor="Gray">
-                    <Label Text="{Binding name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="StudentProfile_Tapped"/>
-                    </Frame.GestureRecognizers>
-                </Frame>-->
+                <Label x:Name="NoResultsLabel"
+                       Text="No results found."
+                       TextColor="Red"
+                       FontSize="16"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       IsVisible="False" />
 
-
-                <ListView x:Name="studentFilter" BackgroundColor="Black">
+                <ListView x:Name="studentFilter" RowHeight="60">
                     <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.View>
-                                <SwipeView>
-                                    <SwipeView.LeftItems>
-                                        <SwipeItems>
-                                            <SwipeItem Text="Update" Command="{Binding UpdateCommand}" BackgroundColor="LightGreen" />
-                                        </SwipeItems>
-                                    </SwipeView.LeftItems>
-                                    <SwipeView.RightItems>
-                                        <SwipeItems>
-                                            <SwipeItem Text="Delete" Command="{Binding DeleteCommand}" BackgroundColor="LightCoral" />
-                                        </SwipeItems>
-                                    </SwipeView.RightItems>
-
-                                    <StackLayout>
-                                        <Label Text="" TextColor="White"/>
-                                    </StackLayout>
-                                </SwipeView>
-                            </ViewCell.View>
-                        </ViewCell>
-                    </DataTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="5">
+                                    <Frame HasShadow="False" CornerRadius="10" Padding="10" BorderColor="Gray">
+                                        <Label Text="{Binding name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="StudentProfile_Tapped"/>
+                                        </Frame.GestureRecognizers>
+                                    </Frame>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+
+            <ListView x:Name="SearchListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" BackgroundColor="#F5F5F5" Margin="0,5,0,5" Spacing="2">
+                                <!--<Frame HasShadow="False" CornerRadius="10" HeightRequest="100" Padding="10" Margin="3,3,3,1" BorderColor="Gray">
+                                    <Label Text="{Binding name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="StudentProfile_Tapped"/>
+                                    </Frame.GestureRecognizers>
+                                </Frame>-->
+                                <Label Text="{Binding name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
+                            <Label Text="{Binding name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
 
         </StackLayout>
     </ContentPage.Content>

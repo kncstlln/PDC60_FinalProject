@@ -7,20 +7,21 @@
         <Frame Margin="20" HeightRequest="1000" HasShadow="False" BorderColor="Black" CornerRadius="10">
             <StackLayout>
 
+
                 <Label HorizontalTextAlignment="Center" Margin="0,0,0,20">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span FontSize="16">ID:</Span>
-                            <Span FontFamily="MontserratM" FontSize="21">18-0165-372</Span>
+                            <Span FontFamily="MontserratM" FontSize="21" Text="{Binding id}"></Span>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
 
                 <Image WidthRequest="200" HeightRequest="200" Source="profile.png"/>
 
-                <Label FontFamily="MontserratBold" FontSize="18" HorizontalTextAlignment="Center" TextColor="Black" Text ="Kane Erryl G. Castillano"/>                 
+                <Label FontFamily="MontserratBold" FontSize="18" HorizontalTextAlignment="Center" TextColor="Black" Text ="{Binding name}"/>                 
 
-                <Frame Padding="20,10" Margin="0,10,0,0" BackgroundColor="#F3F3F3">
+                <Frame Padding="20,10,10,10" Margin="0,0,0,10" BackgroundColor="#F3F3F3">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="100"/>
@@ -32,85 +33,17 @@
                         <Label Grid.Column="2"  Text="Remarks" FontFamily="MontserratM" TextColor="#898787" FontSize="14"/>
                     </Grid>
                 </Frame>
+                <StackLayout x:Name="academicHistoryStackLayout">
 
-                <Frame Padding="20,10" Margin="0,5,0,0">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="60"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0"  Text="2023" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                        <Label Grid.Column="1"  Text="98" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                        <Label Grid.Column="2"  Text="Passed" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                    </Grid>
-                </Frame>
 
-                <Frame Padding="20,10" Margin="0,5,0,0">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="60"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0"  Text="2023" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                        <Label Grid.Column="1"  Text="98" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                        <Label Grid.Column="2"  Text="Passed" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                    </Grid>
-                </Frame>
+                </StackLayout>
 
-                <Frame Padding="20,10" Margin="0,5,0,0">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="60"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0"  Text="2023" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                        <Label Grid.Column="1"  Text="98" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                        <Label Grid.Column="2"  Text="Passed" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                    </Grid>
-                </Frame>
+               
 
-                <Frame Padding="20,10" Margin="0,5,0,0">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="60"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0"  Text="2023" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                        <Label Grid.Column="1"  Text="98" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                        <Label Grid.Column="2"  Text="Passed" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                    </Grid>
-                </Frame>
-
-                <Frame Padding="20,10" Margin="0,5,0,0">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="60"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0"  Text="2023" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                        <Label Grid.Column="1"  Text="98" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                        <Label Grid.Column="2"  Text="Passed" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                    </Grid>
-                </Frame>
-
-                <Frame Padding="20,10" Margin="0,5,0,0">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="60"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0"  Text="2023" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                        <Label Grid.Column="1"  Text="98" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                        <Label Grid.Column="2"  Text="Passed" FontFamily="MontserratM" TextColor="Black" FontSize="14"/>
-                    </Grid>
-                </Frame>
-
+               <Button Clicked="OnAddAcademicHistory" HorizontalOptions="Center" Text="Add Record"/>
+                <Button Clicked="OnUpdateAcademicHistory" HorizontalOptions="Center" Text="Update Record"/>                
+              
+              
             </StackLayout>
         </Frame>
     </ContentPage.Content>

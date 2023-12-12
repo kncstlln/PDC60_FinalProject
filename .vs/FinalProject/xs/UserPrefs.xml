@@ -1,29 +1,30 @@
 ﻿<Properties StartupConfiguration="{36991135-E9A0-4747-B1C8-7C187604904C}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.FinalProject.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.2.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../PDC6-Module08-master/PDC06_Module08/SearchPage.xaml.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.FinalProject.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FinalProject/FinalProject/StudentList.xaml.cs">
     <Files>
-      <File FileName="FinalProject/FinalProject/StudentList.xaml" NotebookId="1" />
-      <File FileName="FinalProject/FinalProject/StudentList.xaml.cs" Line="137" Column="28" NotebookId="1" />
-      <File FileName="FinalProject/FinalProject/LoginPage.xaml" NotebookId="1" />
-      <File FileName="FinalProject/FinalProject/LoginPage.xaml.cs" NotebookId="1" />
+      <File FileName="FinalProject/FinalProject/AcademicHistory.xaml.cs" Line="40" Column="13" />
+      <File FileName="FinalProject/FinalProject/AcademicHistory.xaml" Line="41" Column="17" />
+      <File FileName="FinalProject/FinalProject/AddAcademicHistoryPage.xaml" Line="21" Column="1" />
+      <File FileName="FinalProject/FinalProject/AddAcademicHistoryPage.xaml.cs" Line="17" Column="35" />
+      <File FileName="FinalProject/FinalProject/StudentList.xaml.cs" Line="26" Column="37" />
     </Files>
-    <FloatingWindows>
-      <FloatingWindow WindowId="1" X="2600" Y="-30" Width="861" Height="902">
-        <Files>
-          <File FileName="../PDC6-Module08-master/PDC06_Module08/SearchPage.xaml.cs" Line="126" Column="1" />
-        </Files>
-      </FloatingWindow>
-    </FloatingWindows>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="FinalProject">
+          <Node name="FinalProject" expanded="True">
             <Node name="FinalProject">
+              <Node name="AcademicHistory.xaml" expanded="True" />
+              <Node name="AddAcademicHistoryPage.xaml" expanded="True" />
               <Node name="StudentList.xaml" expanded="True">
                 <Node name="StudentList.xaml.cs" selected="True" />
               </Node>
+              <Node name="StudentProfile.xaml" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -31,9 +32,8 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <Debugger.DebugSourceFolders>
+    <String>/Users/kane/Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/mono/mono/d9a6e8710b37cd7f16cf52eff4f772556e57cc41</String>
+  </Debugger.DebugSourceFolders>
 </Properties>
