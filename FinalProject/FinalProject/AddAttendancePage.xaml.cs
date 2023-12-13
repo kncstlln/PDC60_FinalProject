@@ -6,8 +6,9 @@ using Xamarin.Forms;
 namespace FinalProject
 {	
 	public partial class AddAttendancePage : ContentPage
-	{	
-		public AddAttendancePage ()
+	{
+        private readonly Action onAttendanceAdded;
+        public AddAttendancePage ()
 		{
 			InitializeComponent ();
 		}

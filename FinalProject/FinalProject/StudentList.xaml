@@ -62,15 +62,12 @@
                                     </Frame.GestureRecognizers>
                                 </Frame>-->
                                 <Label Text="{Binding name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
-                            <Label Text="{Binding name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
+                                <Label Text="{Binding name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
-
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

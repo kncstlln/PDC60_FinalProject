@@ -159,10 +159,11 @@ namespace FinalProject
 
         }
 
-        private async void UpdateStudentPage_Clicked(Object sender, EventArgs e)
-        {
+            private async void UpdateStudentPage_Clicked(Object sender, EventArgs e)
+            {
 
-            await Navigation.PushAsync(new UpdateStudentPage());
+            Students selectedStudent =
+            await Navigation.PushAsync(new UpdateStudentPage(selectedStudent));
 
         }
 

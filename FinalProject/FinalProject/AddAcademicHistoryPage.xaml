@@ -13,8 +13,11 @@
                     </Frame>
 
                     <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
-                        <Entry x:Name="yearEntry" WidthRequest="150" Placeholder="Enter Year" Text="{Binding year}" />
+                        <Entry x:Name="studentIdEntry" WidthRequest="150" Placeholder="Enter Name" Text="{Binding id}" />
+                        <Entry x:Name="nameEntry" WidthRequest="150" Placeholder="Enter Name" Text="{Binding name}" />
                         <Entry x:Name="gpaEntry" WidthRequest="150" Placeholder="Enter GPA" Text="{Binding gpa}" />
+                        <Entry x:Name="statusEntry" WidthRequest="150" Placeholder="Enter Status" Text="{Binding status}" />
+                        <Entry x:Name="yearEntry" WidthRequest="150" Placeholder="Enter Year" Text="{Binding year}" />
                     </StackLayout>
                         <Entry x:Name="remarksEntry" Placeholder="Enter Remarks" Text="{Binding remarks}" />
                     

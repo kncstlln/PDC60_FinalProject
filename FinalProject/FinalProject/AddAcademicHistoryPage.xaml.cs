@@ -10,12 +10,11 @@ namespace FinalProject
 {
     public partial class AddAcademicHistoryPage : ContentPage
     {
-
+        public const string ApiUrl = "http://192.168.100.86/PDC60_api/academichistory-create.php";
         public AddAcademicHistoryPage()
         {
             InitializeComponent();
-            //_selectedStudent = selectedStudent;
-            //BindingContext = _selectedStudent;
+
         }
 
         private async void CancelAddAcademicHistory(Object sender, EventArgs e)
@@ -25,65 +24,59 @@ namespace FinalProject
 
         private async void SubmitAddAcademicHistory(Object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            try
+            {
+                // Retrieve data from entry fields
+                string studentId = studentIdEntry.Text;
+                string studentName = nameEntry.Text; 
+                string gpa = gpaEntry.Text;
+                string status = statusEntry.Text;
+                string year = yearEntry.Text;
+                
+                // Validate if required fields are not empty
+                if (string.IsNullOrWhiteSpace(studentId) || string.IsNullOrWhiteSpace(studentName) || string.IsNullOrWhiteSpace(gpa) || string.IsNullOrWhiteSpace(status) || string.IsNullOrWhiteSpace(year))
+                {
+                    await DisplayAlert("Error", "All fields are required", "OK");
+                    return;
+                }
+
+                // Create a data object
+                var academicRecord = new
+                {
+                    student_id = studentId,
+                    name = studentName,
+                    gpa = gpa,
+                    status = status,
+                    year = year,
+                };
+                string jsonData = JsonConvert.SerializeObject(academicRecord);
+
+                using (HttpClient client = new HttpClient())
+                {
+                    StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+                    var response = await client.PostAsync(ApiUrl, content);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        await DisplayAlert("Success", "Academic record added successfully", "OK");
+                        await Navigation.PopAsync();
+                    }
+                    else
+                    {
+                        await DisplayAlert("Error", "Error adding academic record", "OK");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                await DisplayAlert("Error", $"Error: {ex.Message}", "OK");
+            }
         }
-
-        //private async void SubmitAddAcademicHistory(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        // Retrieve data from the form
-        //        int student_id = Convert.ToInt32(studentIdEntry.Text);
-        //        string name = nameEntry.Text;
-        //        string section = sectionEntry.Text;
-        //        int year = Convert.ToInt32(yearEntry.Text);
-        //        double gpa = Convert.ToDouble(gpaEntry.Text);
-        //        string remarks = remarksEntry.Text;
-
-        //        // Create an object to send to the API
-        //        var academicHistoryData = new
-        //        {
-        //            student_id = student_id,
-        //            name = name,
-        //            section = section,
-        //            gpa = gpa,
-        //            status = remarks,
-        //            year = year
-        //        };
-
-
-        //        string jsonData = JsonConvert.SerializeObject(academicHistoryData);
-
-
-        //        var httpClient = new HttpClient();
-        //        var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-        //        var response = await httpClient.PostAsync("http://192.168.100.86/academichistory-create.php", content);
-
-        //        if (response.IsSuccessStatusCode)
-        //        {
-        //            // Handle success, maybe display a success message or navigate back
-        //            await DisplayAlert("Success", "Academic history added successfully", "OK");
-
-        //            // Navigate back to AcademicHistory page
-        //            await Navigation.PopAsync();
-
-        //            // Retrieve and refresh academic history data on AcademicHistory page
-        //            var academicHistoryPage = Navigation.NavigationStack.FirstOrDefault(page => page is AcademicHistory) as AcademicHistory;
-
-        //        }
-        //        else
-        //        {
-        //            // Handle failure, display an error message
-        //            await DisplayAlert("Error", "Failed to add academic history", "OK");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // Handle any exceptions that may occur
-        //        Console.WriteLine($"Exception: {ex.Message}");
-        //    }
-        //}
-
     }
 }
+
+
+  
 

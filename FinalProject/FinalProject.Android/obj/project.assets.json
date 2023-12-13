@@ -3803,32 +3803,39 @@
     ]
   },
   "packageFolders": {
-    "/Users/kane/.nuget/packages/": {}
+    "C:\\Users\\david\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/FinalProject.Android.csproj",
+      "projectUniqueName": "C:\\Users\\david\\source\\repos\\PDC60_FinalProject\\PDC60_FinalProject\\FinalProject\\FinalProject.Android\\FinalProject.Android.csproj",
       "projectName": "FinalProject.Android",
-      "projectPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/FinalProject.Android.csproj",
-      "packagesPath": "/Users/kane/.nuget/packages/",
-      "outputPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/",
+      "projectPath": "C:\\Users\\david\\source\\repos\\PDC60_FinalProject\\PDC60_FinalProject\\FinalProject\\FinalProject.Android\\FinalProject.Android.csproj",
+      "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\david\\source\\repos\\PDC60_FinalProject\\PDC60_FinalProject\\FinalProject\\FinalProject.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/kane/.config/NuGet/NuGet.Config"
+        "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid13.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/FinalProject.csproj": {
-              "projectPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/FinalProject.csproj"
+            "C:\\Users\\david\\source\\repos\\PDC60_FinalProject\\PDC60_FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {
+              "projectPath": "C:\\Users\\david\\source\\repos\\PDC60_FinalProject\\PDC60_FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj"
             }
           }
         }
@@ -3854,7 +3861,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Essentials from 1.8.0 to 1.7.0. Reference the package directly from the project to select a different version. \n FinalProject.Android -> FinalProject -> Xamarin.Essentials (>= 1.8.0) \n FinalProject.Android -> Xamarin.Essentials (>= 1.7.0)",
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.8.0 to 1.7.0. Reference the package directly from the project to select a different version. \r\n FinalProject.Android -> FinalProject -> Xamarin.Essentials (>= 1.8.0) \r\n FinalProject.Android -> Xamarin.Essentials (>= 1.7.0)",
       "libraryId": "Xamarin.Essentials",
       "targetGraphs": [
         "MonoAndroid,Version=v13.0"
@@ -3864,7 +3871,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2622 to 5.0.0.2196. Reference the package directly from the project to select a different version. \n FinalProject.Android -> FinalProject -> Xamarin.Forms (>= 5.0.0.2622) \n FinalProject.Android -> Xamarin.Forms (>= 5.0.0.2196)",
+      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2622 to 5.0.0.2196. Reference the package directly from the project to select a different version. \r\n FinalProject.Android -> FinalProject -> Xamarin.Forms (>= 5.0.0.2622) \r\n FinalProject.Android -> Xamarin.Forms (>= 5.0.0.2196)",
       "libraryId": "Xamarin.Forms",
       "targetGraphs": [
         "MonoAndroid,Version=v13.0"
