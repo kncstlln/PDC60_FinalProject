@@ -18,14 +18,14 @@ namespace FinalProject
         private HttpClient _Client = new HttpClient();
         private ObservableCollection<Students> _posts;
 
-        public UpdateStudentPage(Students post)
-        {
-            InitializeComponent();
-            nameEntry.Text = post.name;
-            sectionEntry.Text = post.section;
-            ageEntry.Text = Convert.ToString(post.age);
-            emailEntry.Text = post.email;
-        }
+        //public UpdateStudentPage(Students post)
+        //{
+        //    InitializeComponent();
+        //    nameEntry.Text = post.name;
+        //    sectionEntry.Text = post.section;
+        //    ageEntry.Text = Convert.ToString(post.age);
+        //    emailEntry.Text = post.email;
+        //}
 
         private async void CancelUpdateStudent(Object sender, EventArgs e)
         {

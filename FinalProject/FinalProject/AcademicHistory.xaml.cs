@@ -120,7 +120,7 @@ namespace FinalProject
 
         private async void OnAddAcademicHistory(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddAcademicHistoryPage());
+            await Navigation.PushAsync(new AddAcademicHistoryPage(_selectedStudent));
         }
 
         private async void OnUpdateAcademicHistory(object sender, EventArgs e)

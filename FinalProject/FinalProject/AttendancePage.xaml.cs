@@ -23,15 +23,20 @@ namespace FinalProject
         public string Status { get; set; }
     }
 
+
     public partial class AttendancePage : ContentPage
 	{
+        private Students _selectedStudent;
         private const string ApiUrl = "http://192.168.100.86/PDC60_api/attendance_read.php";
         public ObservableCollection<AttendanceRecord> AttendanceRecords { get; set; }
 
-        public AttendancePage ()
+        public AttendancePage (Students selectedStudent)
 		{
 			InitializeComponent ();
             LoadAttendanceData();
+            _selectedStudent = selectedStudent;
+            BindingContext = _selectedStudent;
+
         }
         private async void LoadAttendanceData()
         {
@@ -42,7 +47,7 @@ namespace FinalProject
                     var response = await client.GetStringAsync(ApiUrl);
                     List<AttendanceRecord> attendanceRecords = JsonConvert.DeserializeObject<List<AttendanceRecord>>(response, new JsonSerializerSettings
                     {
-                        DateFormatHandling = DateFormatHandling.MicrosoftDateFormat // Adjust based on your actual date format
+                        DateFormatHandling = DateFormatHandling.MicrosoftDateFormat 
                     });
 
                     attendanceListView.ItemsSource = attendanceRecords;
@@ -51,13 +56,13 @@ namespace FinalProject
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
-                await DisplayAlert("Error", $"Error: {ex.Message}", "OK");
+                await DisplayAlert("", "No Attendance Record yet", "OK");
             }
         }
 
         private async void AddAttendancePage_Clicked(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddAttendancePage());
+            await Navigation.PushAsync(new AddAttendancePage(_selectedStudent));
         }
 
         private async void UpdateAttendancePage_Clicked(Object sender, EventArgs e)

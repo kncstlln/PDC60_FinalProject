@@ -12,14 +12,38 @@
                         <Label Text="Add Academic History" HorizontalOptions="Center" FontFamily="MontserratM" VerticalOptions="CenterAndExpand" FontSize="19"></Label>
                     </Frame>
 
-                    <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
-                        <Entry x:Name="studentIdEntry" WidthRequest="150" Placeholder="Enter Name" Text="{Binding id}" />
-                        <Entry x:Name="nameEntry" WidthRequest="150" Placeholder="Enter Name" Text="{Binding name}" />
-                        <Entry x:Name="gpaEntry" WidthRequest="150" Placeholder="Enter GPA" Text="{Binding gpa}" />
-                        <Entry x:Name="statusEntry" WidthRequest="150" Placeholder="Enter Status" Text="{Binding status}" />
-                        <Entry x:Name="yearEntry" WidthRequest="150" Placeholder="Enter Year" Text="{Binding year}" />
+                    <!--<StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                        <Entry x:Name="studentIdEntry" WidthRequest="150"  Placeholder="Enter Name" Text="2" />
+                        <Entry x:Name="nameEntry" WidthRequest="150" Placeholder="Enter Name" Text="kane castillano" />
+                        <Entry x:Name="gpaEntry" WidthRequest="150" Placeholder="Enter GPA" Text="1" />
+                        <Entry x:Name="statusEntry" WidthRequest="150" Placeholder="Enter Status" Text="passed" />
+                        <Entry x:Name="yearEntry" WidthRequest="150" Placeholder="Enter Year" Text="2021" />
                     </StackLayout>
-                        <Entry x:Name="remarksEntry" Placeholder="Enter Remarks" Text="{Binding remarks}" />
+                        <Entry x:Name="remarksEntry" Placeholder="Enter Remarks" Text="Passed" />-->
+
+                     <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                        <Entry x:Name="studentIdEntry" WidthRequest="150"  Placeholder="Enter ID" Text="{Binding id}" />
+                        <Entry x:Name="nameEntry" WidthRequest="150" Placeholder="Enter Name" Text="{Binding name}" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="gpaEntry" WidthRequest="150" Placeholder="Enter GPA" />
+                        <Entry x:Name="yearEntry" WidthRequest="150" Placeholder="Enter Year" />
+                    </StackLayout>
+                        <Picker x:Name="statusPicker" Title="Select Remarks" WidthRequest="150">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Passed</x:String>
+                                    <x:String>Failed</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+
+
+
+
+
+
                     
 
             <!--<Button Clicked="SubmitUpdateAcademicHistory" HorizontalOptions="CenterAndExpand" Text="Update"/>-->

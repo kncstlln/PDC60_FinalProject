@@ -13,10 +13,14 @@
 
                         <Entry x:Name="nameEntry" Margin="0,20,0,0" Placeholder="Enter Name" Text="{Binding remarks}" />
                     <StackLayout Orientation="Horizontal" >
-                        <Entry x:Name="sectionEntry" WidthRequest="100" Placeholder="Enter Section" Text="{Binding section}" />
-                        <Entry x:Name="levelEntry" WidthRequest="100" Placeholder="Enter Level" Text="{Binding level}" />
+                        <Entry x:Name="sectionEntry" WidthRequest="150" Placeholder="Enter Section" Text="{Binding section}" />
+                        <Entry x:Name="levelEntry" WidthRequest="150" Placeholder="Enter Level" Text="{Binding level}" />
+                        
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
                         <Entry x:Name="ageEntry" WidthRequest="100" Placeholder="Enter Age" Text="{Binding year}" />
                         <Entry x:Name="mobileNumEntry" WidthRequest="200" Placeholder="Enter Mobile Number" Keyboard="Numeric" Text="{Binding year}"/>
+
                     </StackLayout>
                         <Entry x:Name="emailEntry" Placeholder="Enter Email" Text="{Binding email}" />
                     

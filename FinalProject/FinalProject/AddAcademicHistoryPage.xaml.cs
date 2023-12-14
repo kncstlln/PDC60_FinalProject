@@ -1,19 +1,25 @@
 ﻿using System;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
+using System.Collections.Generic;
 using Xamarin.Forms;
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.Xml.Linq;
+using Xamarin.Essentials;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace FinalProject
 {
     public partial class AddAcademicHistoryPage : ContentPage
     {
+        private Students _selectedStudent;
         public const string ApiUrl = "http://192.168.100.86/PDC60_api/academichistory-create.php";
-        public AddAcademicHistoryPage()
+        public AddAcademicHistoryPage(Students selectedStudent)
         {
             InitializeComponent();
+            _selectedStudent = selectedStudent;
+            BindingContext = _selectedStudent;
 
         }
 
@@ -28,11 +34,14 @@ namespace FinalProject
             {
                 // Retrieve data from entry fields
                 string studentId = studentIdEntry.Text;
-                string studentName = nameEntry.Text; 
+                string studentName = nameEntry.Text;
                 string gpa = gpaEntry.Text;
-                string status = statusEntry.Text;
+
+                // Use the selected item from the Picker and convert to lowercase
+                string status = (statusPicker.SelectedItem as string)?.ToLowerInvariant();
+
                 string year = yearEntry.Text;
-                
+
                 // Validate if required fields are not empty
                 if (string.IsNullOrWhiteSpace(studentId) || string.IsNullOrWhiteSpace(studentName) || string.IsNullOrWhiteSpace(gpa) || string.IsNullOrWhiteSpace(status) || string.IsNullOrWhiteSpace(year))
                 {
@@ -74,6 +83,7 @@ namespace FinalProject
                 await DisplayAlert("Error", $"Error: {ex.Message}", "OK");
             }
         }
+
     }
 }
 

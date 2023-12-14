@@ -114,8 +114,7 @@ namespace FinalProject
                     if (response.IsSuccessStatusCode)
                     {
                         await DisplayAlert("Success", "Record deleted successfully!", "OK");
-                        await RefreshData(); // Refresh the data after deletion
-                                             // After a successful delete, pop the current page to go back
+                        await RefreshData();                
                         await Navigation.PopAsync();
                     }
                     else
@@ -159,11 +158,11 @@ namespace FinalProject
 
         }
 
-            private async void UpdateStudentPage_Clicked(Object sender, EventArgs e)
-            {
+        private async void UpdateStudentPage_Clicked(Object sender, EventArgs e)
+        {
 
-            Students selectedStudent =
-            await Navigation.PushAsync(new UpdateStudentPage(selectedStudent));
+   
+            await Navigation.PushAsync(new UpdateStudentPage());
 
         }
 

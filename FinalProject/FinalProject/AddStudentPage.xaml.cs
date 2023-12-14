@@ -6,6 +6,8 @@ using System.Net.Http;
 using System.Xml.Linq;
 using Xamarin.Essentials;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace FinalProject
 {	
@@ -55,9 +57,9 @@ namespace FinalProject
                 return;
             }
 
-            if (!int.TryParse(mobileNumEntry.Text, out _))
+            if (mobileNumEntry.Text.Length != 11 || !mobileNumEntry.Text.All(char.IsDigit))
             {
-                await DisplayAlert("Error", "Mobile number should be a numeric value.", "OK");
+                await DisplayAlert("Error", "Mobile number should be 11 digits.", "OK");
                 return;
             }
 

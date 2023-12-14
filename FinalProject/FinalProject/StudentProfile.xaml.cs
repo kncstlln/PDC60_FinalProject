@@ -38,7 +38,7 @@ namespace FinalProject
 
         private async void AttendancePage_Tapped(Object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AttendancePage());
+            await Navigation.PushAsync(new AttendancePage(_selectedStudent));
         }
     }
 }
