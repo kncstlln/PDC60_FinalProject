@@ -26,7 +26,6 @@
                 </StackLayout>
             </Grid>
             <Frame Margin="0,3,0,10" HeightRequest="25" BackgroundColor="#F3F3F3" CornerRadius="10">
-
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="150"/>
@@ -36,21 +35,11 @@
                     <Label Grid.Column="0"  Text="Date" FontFamily="Montserrat" HorizontalOptions="Center"/>
                     <Label Grid.Column="1"  Text="Status" FontFamily="Montserrat" HorizontalOptions="Center"/>
                 </Grid>
-
             </Frame>
-
-         
-
             <ScrollView>
-                    <StackLayout x:Name="attendanceStackLayout">
-
-
-                    </StackLayout>
+                <StackLayout x:Name="attendanceStackLayout">
+                </StackLayout>
             </ScrollView>
-
-           
-            
-           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

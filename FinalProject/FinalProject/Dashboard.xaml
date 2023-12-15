@@ -5,7 +5,6 @@
     x:Class="FinalProject.Dashboard">
     <ContentPage.Content>
         <StackLayout>
-
             <Frame HasShadow="False" CornerRadius="10" HeightRequest="100" Padding="10" Margin="3,20,3,3" BackgroundColor="Black">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -22,9 +21,7 @@
                     <Image Source="welcome3.png" Grid.Column="1" Grid.RowSpan="2" WidthRequest="100" HeightRequest="100"></Image>
                 </Grid>
             </Frame>
-
             <Label FontFamily="MontserratM" FontSize="36" HorizontalTextAlignment="Center" TextColor="Black" Text="Academic Year 2023-2024"/>
-
             <Grid Margin="0,10,0,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="200"/>
@@ -34,7 +31,6 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-
                 <Frame HasShadow="False" Grid.Row="0" Grid.Column="0" BorderColor="Green" CornerRadius="10" HeightRequest="250" WidthRequest="250" Padding="0" Margin="3,3,3,3">
                     <StackLayout>
                         <Grid>
@@ -50,7 +46,6 @@
                         <TapGestureRecognizer Tapped="OnBSIT1_Tapped"/>
                     </Frame.GestureRecognizers>
                 </Frame>
-
                 <Frame HasShadow="False" Grid.Row="0" Grid.Column="1" BorderColor="#EFB524" CornerRadius="10" HeightRequest="250" WidthRequest="250" Padding="0" Margin="3,3,3,3">
                     <StackLayout>
                         <Grid>
@@ -62,11 +57,10 @@
                             <Label Text="BSIT-2" TextColor="Black"  Grid.Row="1" FontFamily="Montserrat" FontSize="24" HorizontalTextAlignment="Center"></Label>
                         </Grid>
                     </StackLayout>
-                        <Frame.GestureRecognizers>
+                    <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnBSIT2_Tapped"/>
                     </Frame.GestureRecognizers>
                 </Frame>
-
                 <Frame HasShadow="False" Grid.Row="1" Grid.Column="0" BorderColor="Red" CornerRadius="10" HeightRequest="250" WidthRequest="250" Padding="0" Margin="3,3,3,3">
                     <StackLayout>
                         <Grid>
@@ -78,11 +72,10 @@
                             <Label Text="BSIT-3" TextColor="Black"  Grid.Row="1" FontFamily="Montserrat" FontSize="24" HorizontalTextAlignment="Center"></Label>
                         </Grid>
                     </StackLayout>
-                        <Frame.GestureRecognizers>
+                    <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnBSIT3_Tapped"/>
                     </Frame.GestureRecognizers>
                 </Frame>
-
                 <Frame HasShadow="False" Grid.Row="1" Grid.Column="1" BorderColor="Blue" CornerRadius="10" HeightRequest="250" WidthRequest="250" Padding="0" Margin="3,3,3,3">
                     <StackLayout>
                         <Grid>
@@ -94,12 +87,11 @@
                             <Label Text="BSIT-4"  TextColor="Black" Grid.Row="1" FontFamily="Montserrat" FontSize="24" HorizontalTextAlignment="Center"></Label>
                         </Grid>
                     </StackLayout>
-                        <Frame.GestureRecognizers>
+                    <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnBSIT4_Tapped"/>
                     </Frame.GestureRecognizers>
                 </Frame>
             </Grid>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

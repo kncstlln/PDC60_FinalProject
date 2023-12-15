@@ -2,33 +2,27 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalProject.MainPage">
-
     <StackLayout BackgroundColor="Black" NavigationPage.HasNavigationBar="false">
-
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="65"/>
                 <ColumnDefinition Width="295" />
             </Grid.ColumnDefinitions>
         </Grid>
-
         <Image Source="logoMain.png" Margin="0,25,0,5"></Image>
-
         <Frame BackgroundColor="White" HeightRequest="300" CornerRadius="20">
             <Grid>
                 <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="120"/>
-                <RowDefinition Height="45"/>
-                <RowDefinition Height="45"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0" FontFamily="MontserratSB" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" HorizontalTextAlignment="Center" FontSize="39" >Welcome!</Label>
                 <Label Grid.Row="1" FontFamily="MontserratMI" TextColor="Black" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Start" FontSize="14">Effortlessly track and manage your attendance with our user-friendly system. Stay organized, save time, and ensure accurate records. Take control of your academic journey with AUF's cutting-edge Attendance Management System.</Label>
-                <Button Margin="0,0,0,0" Text="Get Started" Clicked="Login_Page_Clicked" TextColor="White" FontFamily="NotoSansR" Grid.Row="2" BackgroundColor="Black" CornerRadius="7"></Button>            
+                <Button Margin="0,0,0,0" Text="Get Started" Clicked="Login_Page_Clicked" TextColor="White" FontFamily="NotoSansR" Grid.Row="2" BackgroundColor="Black" CornerRadius="7"></Button>
             </Grid>
         </Frame>
-
     </StackLayout>
-
 </ContentPage>
 

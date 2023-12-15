@@ -6,8 +6,6 @@
     <ContentPage.Content>
         <Frame Margin="20" HeightRequest="1000" HasShadow="False" BorderColor="Black" CornerRadius="10">
             <StackLayout>
-
-
                 <Label HorizontalTextAlignment="Center" Margin="0,0,0,20">
                     <Label.FormattedText>
                         <FormattedString>
@@ -16,11 +14,8 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-
                 <Image WidthRequest="200" HeightRequest="200" Source="profile.png"/>
-
                 <Label FontFamily="MontserratBold" FontSize="18" HorizontalTextAlignment="Center" TextColor="Black" Text ="{Binding name}"/>                 
-
                 <Frame Padding="20,10,10,10" Margin="0,0,0,10" BackgroundColor="#F3F3F3">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -33,18 +28,11 @@
                         <Label Grid.Column="2"  Text="Remarks" FontFamily="MontserratM" TextColor="#898787" FontSize="14"/>
                     </Grid>
                 </Frame>
-                 <ScrollView>
-                        <StackLayout x:Name="academicHistoryStackLayout">
-
-
-                        </StackLayout>
+                <ScrollView>
+                    <StackLayout x:Name="academicHistoryStackLayout">
+                    </StackLayout>
                 </ScrollView>
-
-               
-
-               <Button Clicked="OnAddAcademicHistory" HorizontalOptions="Center" Text="Add Record"/>            
-              
-              
+                <Button Clicked="OnAddAcademicHistory" HorizontalOptions="Center" Text="Add Record"/>            
             </StackLayout>
         </Frame>
     </ContentPage.Content>

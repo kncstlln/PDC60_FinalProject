@@ -5,23 +5,12 @@
     x:Class="FinalProject.AddAcademicHistoryPage">
     <ContentPage.Content>
         <StackLayout>
-
-             <Frame Margin="20" HeightRequest="1000" HasShadow="False" BorderColor="Black" CornerRadius="10">
+            <Frame Margin="20" HeightRequest="1000" HasShadow="False" BorderColor="Black" CornerRadius="10">
                 <StackLayout>
                     <Frame BackgroundColor="#F3F3F3" HeightRequest="26">
                         <Label Text="Add Academic History" HorizontalOptions="Center" FontFamily="MontserratM" VerticalOptions="CenterAndExpand" FontSize="19"></Label>
                     </Frame>
-
-                    <!--<StackLayout Orientation="Horizontal" Margin="0,20,0,0">
-                        <Entry x:Name="studentIdEntry" WidthRequest="150"  Placeholder="Enter Name" Text="2" />
-                        <Entry x:Name="nameEntry" WidthRequest="150" Placeholder="Enter Name" Text="kane castillano" />
-                        <Entry x:Name="gpaEntry" WidthRequest="150" Placeholder="Enter GPA" Text="1" />
-                        <Entry x:Name="statusEntry" WidthRequest="150" Placeholder="Enter Status" Text="passed" />
-                        <Entry x:Name="yearEntry" WidthRequest="150" Placeholder="Enter Year" Text="2021" />
-                    </StackLayout>
-                        <Entry x:Name="remarksEntry" Placeholder="Enter Remarks" Text="Passed" />-->
-
-                     <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                    <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
                         <Entry x:Name="studentIdEntry" WidthRequest="150"  Placeholder="Enter ID" Text="{Binding id}" />
                         <Entry x:Name="nameEntry" WidthRequest="150" Placeholder="Enter Name" Text="{Binding name}" />
                     </StackLayout>
@@ -29,31 +18,20 @@
                         <Entry x:Name="gpaEntry" WidthRequest="150" Placeholder="Enter GPA" />
                         <Entry x:Name="yearEntry" WidthRequest="150" Placeholder="Enter Year" />
                     </StackLayout>
-                        <Picker x:Name="statusPicker" Title="Select Remarks" WidthRequest="150">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>Passed</x:String>
-                                    <x:String>Failed</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
-
-
-
-
-
-
-
-                    
-
-            <!--<Button Clicked="SubmitUpdateAcademicHistory" HorizontalOptions="CenterAndExpand" Text="Update"/>-->
+                    <Picker x:Name="statusPicker" Title="Select Remarks" WidthRequest="150">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Passed</x:String>
+                                <x:String>Failed</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
                     <StackLayout Margin="0,30,0,0">
                         <Button Clicked="SubmitAddAcademicHistory" BackgroundColor="#B5F4D1" CornerRadius="20" FontFamily="MontserratBold" WidthRequest="200" HorizontalOptions="CenterAndExpand" TextColor="#5AA572" Text="Add"/>
                         <Button Clicked="CancelAddAcademicHistory" BackgroundColor="#FFE2DB" CornerRadius="20" FontFamily="MontserratBold" WidthRequest="200" HorizontalOptions="CenterAndExpand" TextColor="#C36060" Text="Cancel"/>
                     </StackLayout>
                 </StackLayout>
             </Frame>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

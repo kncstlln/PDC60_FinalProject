@@ -15,12 +15,10 @@ namespace FinalProject
 	{
         public const string url = "http://192.168.100.86/PDC60_api/api_create.php";
         private HttpClient _Client = new HttpClient();
-
         public AddStudentPage ()
 		{
 			InitializeComponent ();
 		}
-
         private async void CancelAddStudent(Object sender, EventArgs e)
         {
             bool userConfirmation = await DisplayAlert("Cancel", "Are you sure you want to cancel adding a record?", "Yes", "No");
@@ -31,7 +29,6 @@ namespace FinalProject
                 await Navigation.PopAsync();
             }
         }
-
         private async void SubmitAddStudent(Object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(nameEntry.Text) ||
@@ -84,7 +81,6 @@ namespace FinalProject
                 };
 
                 var content = JsonConvert.SerializeObject(post);
-
                 var response = await _Client.PostAsync(url, new StringContent(content, Encoding.UTF8, "application/json"));
 
                 if (response.IsSuccessStatusCode)
@@ -101,7 +97,6 @@ namespace FinalProject
                 await Navigation.PopAsync();
             }
         }
-
         private bool IsValidEmail(string email)
         {
             try

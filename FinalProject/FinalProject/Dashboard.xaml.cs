@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using Xamarin.Forms;
 
 namespace FinalProject
@@ -10,7 +9,6 @@ namespace FinalProject
 		public Dashboard ()
 		{
 			InitializeComponent ();
-
 		}
 
         private async void OnBSIT1_Tapped(System.Object sender, System.EventArgs e)

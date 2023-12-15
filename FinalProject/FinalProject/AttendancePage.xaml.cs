@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Newtonsoft.Json;
-
 using System.Net.Http;
-
 using System.Collections.ObjectModel;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
@@ -25,14 +22,12 @@ namespace FinalProject
         public string status { get; set; }
        
     }
-
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AttendancePage : ContentPage
 	{
         private Students _selectedStudent;
         private ObservableCollection<AttendanceRecord> attendanceRecord;
         private const string ApiUrl = "http://192.168.100.86/PDC60_api/attendance-read.php";
-        
 
         public AttendancePage(Students selectedStudent)
         {
@@ -63,10 +58,7 @@ namespace FinalProject
             {
                 var response = await client.GetStringAsync(ApiUrl);
                 var attendanceData = JsonConvert.DeserializeObject<List<AttendanceRecord>>(response);
-
-
                 var filteredAttendanceData = attendanceData.Where(record => record.student_id == _selectedStudent.id);
-
                 foreach (var record in filteredAttendanceData)
                 {
                     var frame = new Frame
@@ -82,11 +74,9 @@ namespace FinalProject
                         await Navigation.PushAsync(new UpdateAttendancePage());
                     };
                     frame.GestureRecognizers.Add(tapGesture);
-
                     var grid = new Grid();
                     grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(150) });
                     grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(250) });
-
                     var dateLabel = new Label
                     {
                         Text = record.attendance_date,
@@ -104,7 +94,6 @@ namespace FinalProject
                         FontSize = 14,
                         HorizontalTextAlignment = TextAlignment.Center
                     };
-
                     if (record.status.Equals("Present", StringComparison.OrdinalIgnoreCase))
                     {
                         statusLabel.TextColor = Color.Green;
@@ -118,19 +107,13 @@ namespace FinalProject
                         
                         statusLabel.TextColor = Color.Black;
                     }
-
                     grid.Children.Add(dateLabel, 0, 0);
                     grid.Children.Add(statusLabel, 1, 0);
-
                     frame.Content = grid;
-
                     attendanceStackLayout.Children.Add(frame);
                 }
             }
         }
-
-
-
         private async void AddAttendancePage_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddAttendancePage(_selectedStudent));
@@ -140,28 +123,6 @@ namespace FinalProject
         {
             await Navigation.PushAsync(new UpdateAttendancePage());
         }
-        //private async Task<bool> DeleteAttendance(int attendanceId)
-        //{
-        //    string apiUrl = "http://192.168.100.86/pdc6/attendance-delete.php";
-
-        //    try
-        //    {
-        //        using (HttpClient client = new HttpClient())
-        //        {
-        //            var postData = new List<KeyValuePair<string, string>>
-        //    {
-        //        new KeyValuePair<string, string>("id", attendanceId.ToString())
-        //        };
-        //            var response = await client.PostAsync(apiUrl, new FormUrlEncodedContent(postData));
-        //            return response.IsSuccessStatusCode;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine($"Error: {ex.Message}");
-        //        return false;
-        //    }
-        //}
     }
 }
 

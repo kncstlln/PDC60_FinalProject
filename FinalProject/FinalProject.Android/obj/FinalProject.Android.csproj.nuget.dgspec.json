@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/FinalProject.Android.csproj": {}
+    "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject.Android\\FinalProject.Android.csproj": {}
   },
   "projects": {
-    "/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/FinalProject.Android.csproj": {
+    "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject.Android\\FinalProject.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/FinalProject.Android.csproj",
+        "projectUniqueName": "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject.Android\\FinalProject.Android.csproj",
         "projectName": "FinalProject.Android",
-        "projectPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/FinalProject.Android.csproj",
-        "packagesPath": "/Users/kane/.nuget/packages/",
-        "outputPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/",
+        "projectPath": "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject.Android\\FinalProject.Android.csproj",
+        "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
+        "outputPath": "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/kane/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Ryzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "monoandroid13.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "monoandroid13.0": {
             "projectReferences": {
-              "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/FinalProject.csproj": {
-                "projectPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/FinalProject.csproj"
+              "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {
+                "projectPath": "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj"
               }
             }
           }
@@ -48,22 +54,29 @@
         }
       }
     },
-    "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/FinalProject.csproj": {
+    "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/FinalProject.csproj",
+        "projectUniqueName": "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
         "projectName": "FinalProject",
-        "projectPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/FinalProject.csproj",
-        "packagesPath": "/Users/kane/.nuget/packages/",
-        "outputPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/obj/",
+        "projectPath": "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
+        "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
+        "outputPath": "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/kane/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Ryzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -115,11 +128,12 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/Users/kane/Library/Caches/VisualStudio/17.0/MSBuild/25849_3/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

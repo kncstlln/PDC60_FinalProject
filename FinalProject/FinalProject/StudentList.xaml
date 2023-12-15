@@ -24,7 +24,6 @@
                             <ImageButton BackgroundColor="#F3F3F1" Source="trash.png" Grid.Column="2" Padding="9" WidthRequest="40" HorizontalOptions="EndAndExpand"/>
                         </StackLayout>
                 </Grid>
-
                 <Label x:Name="NoResultsLabel"
                        Text="No results found."
                        TextColor="Red"
@@ -49,18 +48,11 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-
             <ListView x:Name="SearchListView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="10" BackgroundColor="#F5F5F5" Margin="0,5,0,5" Spacing="2">
-                                <!--<Frame HasShadow="False" CornerRadius="10" HeightRequest="100" Padding="10" Margin="3,3,3,1" BorderColor="Gray">
-                                    <Label Text="{Binding name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
-                                    <Frame.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="StudentProfile_Tapped"/>
-                                    </Frame.GestureRecognizers>
-                                </Frame>-->
                                 <Label Text="{Binding name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
                                 <Label Text="{Binding name}" FontSize="20" FontFamily="Montserrat" TextColor="Black"></Label>
                             </StackLayout>

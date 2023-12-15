@@ -4657,32 +4657,39 @@
     ]
   },
   "packageFolders": {
-    "/Users/kane/.nuget/packages/": {}
+    "C:\\Users\\Ryzen\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/FinalProject.Android.csproj",
+      "projectUniqueName": "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject.Android\\FinalProject.Android.csproj",
       "projectName": "FinalProject.Android",
-      "projectPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/FinalProject.Android.csproj",
-      "packagesPath": "/Users/kane/.nuget/packages/",
-      "outputPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject.Android/obj/",
+      "projectPath": "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject.Android\\FinalProject.Android.csproj",
+      "packagesPath": "C:\\Users\\Ryzen\\.nuget\\packages\\",
+      "outputPath": "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/kane/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Ryzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid13.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/FinalProject.csproj": {
-              "projectPath": "/Users/kane/Projects/FinalProject/FinalProject/FinalProject/FinalProject.csproj"
+            "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj": {
+              "projectPath": "D:\\FINALPROJECTPDC60\\PDC60_FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj"
             }
           }
         }

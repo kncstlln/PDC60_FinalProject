@@ -21,8 +21,6 @@ namespace FinalProject
             await Navigation.PushAsync(new LoginPage());
         
         }
-
     }
-
 }
 

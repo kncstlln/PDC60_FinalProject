@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Newtonsoft.Json;
-
 using System.Net.Http;
-
 using System.Collections.ObjectModel;
 using Newtonsoft.Json.Linq;
 
@@ -32,7 +29,6 @@ namespace FinalProject
         private ObservableCollection<AcademicRecord> academicHistoryList;
         private const string academicHistory_read = "http://192.168.100.86/PDC60_api/academichistory-read.php";
 
-
         public AcademicHistory (Students selectedStudent)
 		{
 			InitializeComponent ();
@@ -40,8 +36,6 @@ namespace FinalProject
             BindingContext = _selectedStudent;
             academicHistoryList = new ObservableCollection<AcademicRecord>();
             LoadAcademicHistory();
-
-
         }
 
         public Students SelectedStudent
@@ -64,8 +58,6 @@ namespace FinalProject
             {
                 var response = await client.GetStringAsync(academicHistory_read);
                 var academicData = JsonConvert.DeserializeObject<List<AcademicRecord>>(response);
-
-                
                 var filteredAcademicHistory = academicData.Where(record => record.student_id == _selectedStudent.id);
 
                 foreach (var record in filteredAcademicHistory)
@@ -75,7 +67,6 @@ namespace FinalProject
                         Padding = new Thickness(20, 10),
                         BackgroundColor = Color.FromHex("#F3F3F3")
                     };
-
                     var grid = new Grid();
                     grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(100) });
                     grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(100) });
@@ -108,15 +99,11 @@ namespace FinalProject
                     grid.Children.Add(yearLabel, 0, 0);
                     grid.Children.Add(gpaLabel, 1, 0);
                     grid.Children.Add(remarksLabel, 2, 0);
-
                     frame.Content = grid;
-
                     academicHistoryStackLayout.Children.Add(frame);
                 }
             }
         }
-
-
 
         private async void OnAddAcademicHistory(object sender, EventArgs e)
         {
@@ -127,10 +114,6 @@ namespace FinalProject
         {
             await Navigation.PushAsync(new UpdateAcademicHistoryPage());
         }
-
-
-
-
     }
 }
 

@@ -25,11 +25,11 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638380609242719336
+_nugetassetstimestamp=638382720575080400
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=c:\users\david\source\repos\pdc60_finalproject\pdc60_finalproject\finalproject\finalproject.android\finalproject.android.csproj
+projectfullpath=d:\finalprojectpdc60\pdc60_finalproject\finalproject\finalproject.android\finalproject.android.csproj

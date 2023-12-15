@@ -33,24 +33,17 @@ namespace FinalProject
         {
             try
             {
-                // Retrieve data from entry fields
                 string studentId = studentIdEntry.Text;
                 string studentName = nameEntry.Text;
                 string gpa = gpaEntry.Text;
-
-                // Use the selected item from the Picker and convert to lowercase
                 string status = (statusPicker.SelectedItem as string)?.ToLowerInvariant();
-
                 string year = yearEntry.Text;
 
-                // Validate if required fields are not empty
                 if (string.IsNullOrWhiteSpace(studentId) || string.IsNullOrWhiteSpace(studentName) || string.IsNullOrWhiteSpace(gpa) || string.IsNullOrWhiteSpace(status) || string.IsNullOrWhiteSpace(year))
                 {
                     await DisplayAlert("Error", "All fields are required", "OK");
                     return;
                 }
-
-                // Create a data object
                 var academicRecord = new
                 {
                     student_id = studentId,
@@ -84,7 +77,6 @@ namespace FinalProject
                 await DisplayAlert("Error", $"Error: {ex.Message}", "OK");
             }
         }
-
     }
 }
 
