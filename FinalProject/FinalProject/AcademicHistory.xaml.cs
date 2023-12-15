@@ -53,8 +53,6 @@ namespace FinalProject
                 {
                     _selectedStudent = value;
                     OnPropertyChanged(nameof(SelectedStudent));
-
-                
                     BindingContext = this;
                 }
             }
@@ -117,6 +115,8 @@ namespace FinalProject
                 }
             }
         }
+
+
 
         private async void OnAddAcademicHistory(object sender, EventArgs e)
         {

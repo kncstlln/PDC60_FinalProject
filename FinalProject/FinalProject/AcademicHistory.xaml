@@ -33,15 +33,16 @@
                         <Label Grid.Column="2"  Text="Remarks" FontFamily="MontserratM" TextColor="#898787" FontSize="14"/>
                     </Grid>
                 </Frame>
-                <StackLayout x:Name="academicHistoryStackLayout">
+                 <ScrollView>
+                        <StackLayout x:Name="academicHistoryStackLayout">
 
 
-                </StackLayout>
+                        </StackLayout>
+                </ScrollView>
 
                
 
-               <Button Clicked="OnAddAcademicHistory" HorizontalOptions="Center" Text="Add Record"/>
-                <Button Clicked="OnUpdateAcademicHistory" HorizontalOptions="Center" Text="Update Record"/>                
+               <Button Clicked="OnAddAcademicHistory" HorizontalOptions="Center" Text="Add Record"/>            
               
               
             </StackLayout>

@@ -12,7 +12,7 @@
 
                     </Frame>
 
-                    <Image WidthRequest="150" HeightRequest="150" Source="profile.png"/>
+                   <Image WidthRequest="150" HeightRequest="150" Source="profile.png"/>
                     <Grid Margin="10,20,10,10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40"/>  
@@ -26,22 +26,21 @@
                         <ColumnDefinition Width="80"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Row="0" Text="ID No." />
-                    <Label Grid.Row="1" Text="Name" />
-                    <Label Grid.Row="2" Text="Age" />
-                    <Label Grid.Row="3" Text="Section"/>
-                    <Label Grid.Row="4" Text="Mobile No."/>
-                    <Label Grid.Row="5" Text="Email"/>
-                    <Label Grid.Column="1" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding age}"/>
-                    <Label Grid.Column="1" Grid.Row="1" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding age}"/>
-                    <Label Grid.Column="1" Grid.Row="2" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding age}"/>
-                    <Label Grid.Column="1" Grid.Row="3" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding section}"/>
-                    <Label Grid.Column="1" Grid.Row="4" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding mobile_num}"/>
-                    <Label Grid.Column="1" Grid.Row="5"  TextColor="Black" FontFamily="Montserrat" FontSize="13" Text="{Binding email}"/>
+                    <Label Grid.Row="0" Text="ID No." VerticalOptions="Center"/>
+                    <Label Grid.Row="1" Text="Name" VerticalOptions="Center" />
+                    <Label Grid.Row="2" Text="Age" VerticalOptions="Center" />
+                    <Label Grid.Row="3" Text="Section" VerticalOptions="Center"/>
+                    <Label Grid.Row="4" Text="Mobile No." VerticalOptions="Center"/>
+                  
+                    <Entry IsReadOnly="True" x:Name="studentIdEntry" Grid.Column="1" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding id}"/>
+                    <Entry IsReadOnly="True" Grid.Column="1" x:Name="nameEntry" Grid.Row="1" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding name}"/>
+                    <Entry IsReadOnly="True" Grid.Column="1" x:Name="ageEntry" Grid.Row="2" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding age}"/>
+                    <Entry IsReadOnly="True" Grid.Column="1" x:Name="sectionEntry" Grid.Row="3" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding section}"/>
+                    <Entry IsReadOnly="True" Grid.Column="1" x:Name="mobileNumEntry" Grid.Row="4" TextColor="Black" FontFamily="Montserrat" FontSize="16" Text="{Binding mobile_num}"/>
                    
                 </Grid>
                      <Label Text="Date For Attendance" FontFamily="MontserratM" HorizontalTextAlignment="Center"/>
-                     <Label Text="LAGAY DATE" Margin="0,0,0,20" FontFamily="MontserratSB" HorizontalTextAlignment="Center" FontSize="16"/>
+                     <Entry IsReadOnly="True" x:Name="dateEntry" Grid.Row="4" TextColor="Black" FontFamily="Montserrat" FontSize="16" HorizontalOptions="CenterAndExpand"/>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                         <Button Text="Present" WidthRequest="150" CornerRadius="20" BackgroundColor="#B5F4D1" TextColor="#5AA572" FontFamily="MontserratBold"></Button>
                         <Button Text="Absent" WidthRequest="150" CornerRadius="20" BackgroundColor="#FFE2DB" TextColor="#C36060" FontFamily="MontserratBold"></Button>

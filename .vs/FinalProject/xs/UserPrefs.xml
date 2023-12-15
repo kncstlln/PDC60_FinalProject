@@ -1,36 +1,8 @@
 ﻿<Properties StartupConfiguration="{36991135-E9A0-4747-B1C8-7C187604904C}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FinalProject/FinalProject/AttendancePage.xaml.cs">
-    <Files>
-      <File FileName="FinalProject/FinalProject/AddAttendancePage.xaml" />
-      <File FileName="FinalProject/FinalProject/AddAcademicHistoryPage.xaml.cs" Line="67" Column="76" />
-      <File FileName="FinalProject/FinalProject/AddAttendancePage.xaml.cs" />
-      <File FileName="FinalProject/FinalProject/StudentList.xaml.cs" Line="56" Column="10" />
-      <File FileName="FinalProject/FinalProject/AttendancePage.xaml.cs" Line="51" Column="24" />
-      <File FileName="FinalProject/FinalProject/StudentProfile.xaml.cs" />
-      <File FileName="FinalProject/FinalProject/AttendancePage.xaml" />
-      <File FileName="FinalProject/FinalProject/StudentList.xaml" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="FinalProject" expanded="True">
-            <Node name="FinalProject">
-              <Node name="AddAcademicHistoryPage.xaml" expanded="True" />
-              <Node name="AttendancePage.xaml" expanded="True" />
-              <Node name="StudentList.xaml" expanded="True" />
-              <Node name="StudentProfile.xaml" expanded="True" />
-              <Node name="UpdateStudentPage.xaml" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.FinalProject.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.2.0" />
   <MultiItemStartupConfigurations />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.ItemProperties.FinalProject.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <Debugger.DebugSourceFolders>
     <String>/Users/kane/Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/mono/mono/d9a6e8710b37cd7f16cf52eff4f772556e57cc41</String>
@@ -38,4 +10,37 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="FinalProject/FinalProject/AttendancePage.xaml.cs">
+    <Files>
+      <File FileName="FinalProject/FinalProject/AttendancePage.xaml.cs" Line="56" Column="1" />
+      <File FileName="FinalProject/FinalProject/AcademicHistory.xaml.cs" Line="1" Column="1" />
+      <File FileName="FinalProject/FinalProject/AddAcademicHistoryPage.xaml.cs" Line="18" Column="1" />
+      <File FileName="FinalProject/FinalProject/AddAttendancePage.xaml.cs" Line="53" Column="1" />
+      <File FileName="FinalProject/FinalProject/AttendancePage.xaml" Line="47" Column="51" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FinalProject">
+            <Node name="FinalProject">
+              <Node name="Dependencies" selected="True" />
+              <Node name="AddAcademicHistoryPage.xaml" expanded="True" />
+              <Node name="AddAttendancePage.xaml" expanded="True" />
+              <Node name="AttendancePage.xaml" expanded="True" />
+              <Node name="StudentList.xaml" expanded="True" />
+              <Node name="StudentProfile.xaml" expanded="True" />
+            </Node>
+            <Node name="FinalProject.Android" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Packages" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.2.0" />
 </Properties>

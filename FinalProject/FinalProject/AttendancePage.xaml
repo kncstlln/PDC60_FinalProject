@@ -39,36 +39,18 @@
 
             </Frame>
 
-            <ListView x:Name="attendanceListView" HasUnevenRows="True" RowHeight="50" >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid> 
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="50"/>
+         
 
-                                </Grid.RowDefinitions>
+            <ScrollView>
+                    <StackLayout x:Name="attendanceStackLayout">
 
-                                <Label Text="{Binding Date}" Grid.Column="0" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
-                                <Label Text="{Binding Status}" Grid.Column="1" HorizontalTextAlignment="Center" VerticalOptions="Center">
-                                    <Label.Triggers>
-                                        <DataTrigger TargetType="Label" Binding="{Binding Status}" Value="Present">
-                                            <Setter Property="TextColor" Value="Green" />
-                                        </DataTrigger>
-                                        <DataTrigger TargetType="Label" Binding="{Binding Status}" Value="Absent">
-                                            <Setter Property="TextColor" Value="Red" />
-                                        </DataTrigger>
-                                    </Label.Triggers>
-                                </Label>
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+
+                    </StackLayout>
+            </ScrollView>
+
+           
+            
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
